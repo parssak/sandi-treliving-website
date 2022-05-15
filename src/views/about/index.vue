@@ -39,7 +39,7 @@
           Visit the camh website
         </a>
       </div>
-      <div>
+      <div class="pb-4">
         <img
           class="w-full h-full object-cover"
           src="@/assets/images/married.png"
@@ -50,7 +50,7 @@
     </div>
   </Container>
 
-  <Container class="bg-[#DBC2C3]">
+  <Container class="bg-accent-hover">
     <h2>Why mental health?</h2>
     <p>
       My personal connection to mental health goes back to my early family life.

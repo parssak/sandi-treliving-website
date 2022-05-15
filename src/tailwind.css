@@ -51,7 +51,7 @@ ul:not(.unstyled) li::before {
 /* #region - Inputs - */
 
 a.with-underline {
-  @apply relative transition w-max hover:text-accent;
+  @apply relative transition w-max hover:text-accent-lightest;
 }
 
 a.with-underline::before {

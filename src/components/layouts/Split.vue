@@ -1,12 +1,36 @@
-<script lang="ts">
+<template>
+  <Container>
+    <div class="grid gap-12 lg:grid-cols-5">
+      <section :class="flip && `lg:order-1`" class="lg:py-12 lg:col-span-2">
+        <p v-if="slogan" class="uppercase tracking-widest text-accent mb-4">
+          {{ slogan }}
+        </p>
+        <h2>
+          <span v-html="title"></span>
+        </h2>
+        <p class="lg:max-w-md">
+          <span v-html="description"></span>
+        </p>
+        <slot name="extra-content"></slot>
+      </section>
+      <section class="lg:col-span-3">
+        <div class="split-img-wrapper w-full h-full relative">
+          <div
+            v-if="!withoutBorder"
+            class="absolute -top-2 md:-top-4 w-full h-full"
+            :class="`${flip ? '-left-2 md:-left-4' : '-right-2 md:-right-4'}
+            ${bgClass}
+            `"
+          ></div>
+          <slot></slot>
+        </div>
+      </section>
+    </div>
+  </Container>
+</template>
+
+<script>
 import Container from "@/components/layouts/Container.vue";
-
-type Depth = "../" | "../../" | "../../../";
-const getImage = (depth: Depth, name: string) => {
-  // @ts-ignore
-  return new URL(`${depth}assets/${name}`, import.meta.url).href;
-};
-
 export default {
   components: { Container },
   props: {
@@ -26,14 +50,18 @@ export default {
       type: Boolean,
       default: false,
     },
-  },
-  setup() {
-    const getImageUrl = (name) => {
-      return getImage("../../", name);
-    };
-    return {
-      getImageUrl,
-    };
+    withoutBorder: {
+      type: Boolean,
+      default: false,
+    },
+    slogan: {
+      type: String,
+      default: null,
+    },
+    bgClass: {
+      type: String,
+      default: "bg-accent",
+    },
   },
 };
 </script>
@@ -42,29 +70,7 @@ export default {
 .split-img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: contain; */
+  position: relative;
 }
 </style>
-
-<template>
-  <Container :class="dark && 'bg-accent-dark'">
-    <div class="grid gap-x-8 gap-y-12 lg:grid-cols-2">
-      <section :class="flip && `lg:order-1`" class="lg:py-12">
-        <h2 :class="dark && 'text-white'">{{ title }}</h2>
-        <p :class="dark && 'text-white'"><span v-html="description"></span></p>
-        <slot name="extra-content"></slot>
-      </section>
-      <section>
-        <div class="split-img-wrapper w-full h-full rounded-md overflow-hidden">
-          <slot>
-            <img
-              :src="getImageUrl('about-1.png')"
-              class="object-cover w-full h-full"
-              alt=""
-            />
-          </slot>
-        </div>
-      </section>
-    </div>
-  </Container>
-</template>

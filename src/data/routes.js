@@ -20,4 +20,11 @@ export const ROUTES_SOURCE = [
     component: () => import("@/views/womenmind/index.vue"),
     meta: { title: "Womenmind" },
   },
+  {
+    path: "/speaking",
+    label: "speaking",
+    name: "speaking",
+    component: () => import("@/views/speaking/index.vue"),
+    meta: { title: "Speaking" },
+  },
 ];

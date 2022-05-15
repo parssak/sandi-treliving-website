@@ -171,4 +171,72 @@ const accomplishments = [
       </div>
     </div>
   </Container>
+
+  <Container>
+    <div class="flex flex-col items-center text-center">
+      <img
+        src="@/assets/icons/womenmind-logo.svg"
+        class="w-full max-w-sm mb-4"
+      />
+      <h3 class="leading-tight">
+        Learn more about joining the
+        <span class="italic">womenmind</span> community and how you can help
+        close the gender gap in mental health at CAMH and beyond.
+      </h3>
+      <a
+        href="https://www.camh.ca/en/get-involved/join-the-cause/womenmind"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-xl btn-dark mt-6"
+      >
+        Visit the camh website
+      </a>
+    </div>
+  </Container>
+
+  <div class="bg-accent-light">
+    <Container>
+      <div class="grid gap-4 lg:gap-8 lg:grid-cols-3 text-white">
+        <div>
+          <h3 class="text-white">
+            For more information about <span class="italic">womenmind</span>,
+            please contact:
+          </h3>
+        </div>
+        <div>
+          <p>
+            <span class="font-medium">Megan Tregunno </span>
+            <br />
+            Vice President, Philanthropy
+            <br />
+            <a href="tel:416-697-7902" class="with-underline">
+              <span class="font-medium">T:</span> 416-697-7902
+            </a>
+            <br />
+            <a href="mailto:megan.tregunno@camh.ca" class="with-underline">
+              <span class="font-medium">E:</span>
+              megan.tregunno@camh.ca
+            </a>
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <span class="font-medium">Muthoni Kariuki </span>
+            <br />
+            Senior Philanthropy Officer, Engagement
+            <br />
+            <a href="tel:416-951-8420" class="with-underline">
+              <span class="font-medium">T:</span> 416-951-8420
+            </a>
+            <br />
+            <a href="mailto:muthoni.kariuki@camh.ca" class="with-underline">
+              <span class="font-medium">E:</span>
+              muthoni.kariuki@camh.ca
+            </a>
+          </p>
+        </div>
+      </div>
+    </Container>
+  </div>
 </template>
