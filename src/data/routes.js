@@ -32,6 +32,13 @@ export const ROUTES_SOURCE = [
     label: "cartwheel",
     name: "cartwheel",
     component: () => import("@/views/cartwheel/index.vue"),
-    meta: { title: "cartwheel" },
+    meta: { title: "Cartwheel" },
+  },
+  {
+    path: "/recommends",
+    label: "recommends",
+    name: "recommends",
+    component: () => import("@/views/recommends/index.vue"),
+    meta: { title: "Recommends" },
   },
 ];

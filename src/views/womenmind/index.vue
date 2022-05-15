@@ -36,11 +36,11 @@ const accomplishments = [
 
 <template>
   <!-- Used negative margin top for putting it back at the top  -->
-  <Container class="-mt-12">
+  <Container class="-mt-10">
     <div class="blockquote">
       <div>
         <h1 class="italic mb-4 md:mb-8">womenmind</h1>
-        <p>
+        <p class="text-xl">
           Deborah Gilles, CEO of the CAMH Foundation explains it best in this
           short video. She believes, as I do, that the womenmind donor community
           plays a critical role in addressing the gender inequities women face

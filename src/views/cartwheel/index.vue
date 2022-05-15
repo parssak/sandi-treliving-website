@@ -1,7 +1,5 @@
 <script setup>
-import Split from "@/components/layouts/Split.vue";
 import Container from "@/components/layouts/Container.vue";
-import Caption from "@/components/Caption.vue";
 import HeroImageSplit from "@/components/layouts/hero/HeroImageSplit.vue";
 </script>
 
@@ -15,11 +13,11 @@ import HeroImageSplit from "@/components/layouts/hero/HeroImageSplit.vue";
       />
     </template>
     <div class="blockquote mb-6">
-      <h1 class="mb-0">Speaking</h1>
+      <h1 class="mb-0">Sandi’s Cartwheel Challenge</h1>
     </div>
     <p class="text-xl">
-      Sandi Treliving offers inspiring speeches that audiences remember. Talk to
-      her about customizing a message for your particular organization.
+      I’m turning 60 this July! To celebrate this milestone I’m launching a
+      Cartwheel Challenge with funds going to womenmind.
     </p>
   </HeroImageSplit>
 
