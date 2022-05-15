@@ -27,11 +27,6 @@ export default {
       default: false,
     },
   },
-  computed: {
-    hasDefaultSlot() {
-      return !!this.$slots.default;
-    },
-  },
   setup() {
     const getImageUrl = (name) => {
       return getImage("../../", name);
@@ -61,8 +56,13 @@ export default {
       </section>
       <section>
         <div class="split-img-wrapper w-full h-full rounded-md overflow-hidden">
-          <slot></slot>
-          <img v-if="!hasDefaultSlot" :src="getImageUrl('contact.png')" />
+          <slot>
+            <img
+              :src="getImageUrl('about-1.png')"
+              class="object-cover w-full h-full"
+              alt=""
+            />
+          </slot>
         </div>
       </section>
     </div>

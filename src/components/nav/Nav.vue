@@ -1,5 +1,5 @@
 <template>
-  <Popover class="sticky left-0 top-0 w-full z-20 bg-white shadow">
+  <Popover class="sticky left-0 top-0 w-full z-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div
         class="
@@ -130,7 +130,6 @@
       </PopoverPanel>
     </transition>
   </Popover>
-  <!-- <div class="mb-20 pb-1" /> -->
 </template>
 
 <script>

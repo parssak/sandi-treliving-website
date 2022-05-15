@@ -8,7 +8,7 @@ const app = createApp(App);
 
 const router = createRouter({
   history: createWebHistory(),
-  base: '/template-website/',
+  base: '/sandi-treliving-website/',
   routes,
   scrollBehavior: function (to, from, savedPosition) {
     if (savedPosition) {

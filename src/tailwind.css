@@ -1,27 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* #region - Typography -  */
-* {
-  font-family: Inter;
-}
+/* * {
+  font-family: 'Playfair Display', serif;
+} */
 
 h1 {
-  @apply text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl;
+  @apply text-4xl tracking-normal font-extralight leading-loose text-accent-darkest mb-12 sm:text-5xl md:text-6xl font-serif;
 }
 
 h2 {
-  @apply text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mb-6 md:mb-8;
+  @apply text-3xl md:text-4xl font-normal tracking-wide text-accent-darkest mb-8 font-serif;
 }
 
 h3 {
-  @apply text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900 mb-4 md:mb-6;
+  @apply text-2xl md:text-3xl font-normal tracking-wide text-accent-darkest mb-2 font-serif;
 }
 
 p {
-  @apply text-base text-gray-500 leading-relaxed;
+  @apply text-lg font-light leading-relaxed;
 }
 
 ul:not(.unstyled) {
@@ -66,41 +67,45 @@ input[type="email"]:not(.text-base),
 input[type="number"],
 textarea,
 select {
-  @apply border-gray-400 focus:border-accent text-lg py-3 px-4 block w-full rounded-md;
+  @apply border-gray-400 focus:border-accent text-lg py-3 px-4 block w-full;
 }
 
 .btn {
-  @apply w-max inline-flex items-center border border-transparent font-medium shadow-sm transition
-        text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 
-        focus:ring-offset-2 focus:ring-accent;
+  @apply w-max inline-flex items-center border border-accent-dark shadow-sm transition
+        text-white  hover:bg-accent-dark focus:outline-none focus:ring-2 
+        focus:ring-offset-2 focus:ring-accent uppercase;
 }
 
 .btn-dark {
-  @apply text-white bg-accent hover:bg-accent-hover focus:ring-accent;
+  @apply text-accent-dark hover:text-white hover:bg-accent-dark focus:ring-accent-dark;
 }
 
 .btn-light {
   @apply text-accent bg-accent-light hover:bg-accent-light_hover;
 }
 
+.btn-white {
+  @apply border-white hover:bg-white hover:text-accent-darkest ring-offset-accent-dark focus:ring-white;
+}
+
 .btn-xs {
-  @apply px-2.5 py-1.5 text-xs rounded;
+  @apply px-2.5 py-1.5 text-xs;
 }
 
 .btn-sm {
-  @apply px-3 py-2 text-sm leading-4 rounded-md;
+  @apply px-3 py-2 text-sm leading-4;
 }
 
 .btn-md {
-  @apply px-4 py-2 text-sm rounded-md;
+  @apply px-6 py-2 text-sm;
 }
 
 .btn-lg {
-  @apply px-4 py-2 text-base rounded-md;
+  @apply px-6 py-2 text-base;
 }
 
 .btn-xl {
-  @apply px-4 py-2 text-base md:px-6 md:py-3 md:text-lg rounded-md;
+  @apply px-6 py-2 text-base md:px-8 md:py-3 md:text-lg;
 }
 
 /* #endregion - Inputs -  */
@@ -110,13 +115,12 @@ select {
 /* #region - Nav - */
 
 .nav-item {
-  @apply 
-              rounded-md
+  @apply rounded-md
               inline-flex
               items-center
               text-base
-              font-medium
-              capitalize
+              
+              uppercase
               transition
               hover:text-accent
               focus:outline-none
@@ -131,14 +135,14 @@ select {
                     flex
                     items-center
                     rounded-md
-                    capitalize
+                    uppercase
                     transition
                     hover:bg-accent-light
                     hover:text-accent-dark;
 }
 
 .nav-item-mobile__text {
-  @apply ml-3 text-sm lg:text-base font-medium;
+  @apply ml-3 text-sm lg:text-base;
 }
 
 nav a {
@@ -167,6 +171,10 @@ nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
   height: 1.5px;
   transition: all 0.2s ease-in-out;
   transform: translateY(2px);
+}
+
+.link {
+  @apply uppercase tracking-wider font-light text-lg;
 }
 
 /* #endregion */
