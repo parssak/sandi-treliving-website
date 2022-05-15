@@ -13,4 +13,11 @@ export const ROUTES_SOURCE = [
     component: () => import("@/views/about/index.vue"),
     meta: { title: "About" },
   },
+  {
+    path: "/womenmind",
+    label: "womenmind",
+    name: "womenmind",
+    component: () => import("@/views/womenmind/index.vue"),
+    meta: { title: "Womenmind" },
+  },
 ];

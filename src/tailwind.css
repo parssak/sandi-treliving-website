@@ -9,8 +9,12 @@
   font-family: 'Playfair Display', serif;
 } */
 
+body,
+html {
+  @apply bg-accent-lightest;
+}
 h1 {
-  @apply text-4xl tracking-normal font-extralight leading-loose text-accent-darkest mb-12 sm:text-5xl md:text-6xl font-serif;
+  @apply text-4xl sm:text-5xl md:text-6xl tracking-normal font-extralight leading-loose text-accent-darkest font-serif mb-6;
 }
 
 h2 {
@@ -71,9 +75,9 @@ select {
 }
 
 .btn {
-  @apply w-max inline-flex items-center border border-accent-dark shadow-sm transition
+  @apply inline-flex justify-center items-center border border-accent-dark transition
         text-white  hover:bg-accent-dark focus:outline-none focus:ring-2 
-        focus:ring-offset-2 focus:ring-accent uppercase;
+        focus:ring-offset-2 focus:ring-accent uppercase font-light tracking-wide text-center;
 }
 
 .btn-dark {
@@ -105,7 +109,7 @@ select {
 }
 
 .btn-xl {
-  @apply px-6 py-2 text-base md:px-8 md:py-3 md:text-lg;
+  @apply text-base px-8 py-3 md:text-lg;
 }
 
 /* #endregion - Inputs -  */
@@ -115,11 +119,9 @@ select {
 /* #region - Nav - */
 
 .nav-item {
-  @apply rounded-md
-              inline-flex
+  @apply inline-flex
               items-center
               text-base
-              
               uppercase
               transition
               hover:text-accent
@@ -130,19 +132,19 @@ select {
 }
 
 .nav-item-mobile {
-  @apply mb-1
+  @apply mb-2
                     p-2
                     flex
                     items-center
-                    rounded-md
                     uppercase
+                    text-lg
                     transition
-                    hover:bg-accent-light
-                    hover:text-accent-dark;
+                    hover:bg-white
+                    hover:text-accent-light;
 }
 
 .nav-item-mobile__text {
-  @apply ml-3 text-sm lg:text-base;
+  @apply ml-2 text-base;
 }
 
 nav a {
@@ -158,7 +160,7 @@ nav .router-link-active:not(.no-show-active) {
 }
 
 nav .router-link-active:not(.no-show-active).nav-item-mobile {
-  @apply bg-accent;
+  @apply bg-accent hover:text-white;
 }
 
 nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
@@ -178,3 +180,14 @@ nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
 }
 
 /* #endregion */
+
+/* #region - Custom - */
+
+.blockquote {
+  @apply pl-6 relative flex items-center;
+}
+
+.blockquote::before {
+  @apply absolute left-0 w-[3px] bg-accent-darkest h-full;
+  content: "";
+}

@@ -1,5 +1,5 @@
 <template>
-  <Popover class="sticky left-0 top-0 w-full z-20 bg-white">
+  <Popover class="sticky left-0 top-0 w-full z-20 bg-accent-lightest">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div
         class="
@@ -12,12 +12,12 @@
       >
         <div class="flex justify-start items-center lg:w-0 flex-1">
           <router-link to="/">
-            <span class="sr-only">Company Name</span>
+            <span class="sr-only">Sandi Treliving</span>
             <div class="flex items-center">
               <img
                 class="h-9 w-auto flex items-center"
                 src="@/assets/logo.svg"
-                alt="Company Name"
+                alt="Sandi Treliving"
               />
             </div>
           </router-link>
@@ -25,19 +25,21 @@
         <div class="-mr-2 -my-2 md:hidden">
           <PopoverButton
             class="
-              rounded-md
               p-2
               inline-flex
               items-center
               justify-center
               text-white
-              hover:text-gray-500
               transition
               hover:bg-white
+              group
             "
           >
             <span class="sr-only">Open menu</span>
-            <MenuIcon class="h-6 w-6 text-accent" aria-hidden="true" />
+            <MenuIcon
+              class="h-6 w-6 text-accent group-hover:text-accent-hover"
+              aria-hidden="true"
+            />
           </PopoverButton>
         </div>
         <PopoverGroup as="nav" class="hidden md:flex space-x-6 xl:space-x-7">
@@ -77,13 +79,7 @@
         "
       >
         <div
-          class="
-            rounded-lg
-            shadow-lg
-            ring-1 ring-black ring-opacity-5
-            bg-gray-200
-            divide-y-2 divide-gray-50
-          "
+          class="shadow-lg ring-1 ring-black ring-opacity-5 bg-accent-lightest"
         >
           <div class="pt-5 pb-6 px-5">
             <div class="flex items-center justify-between">
@@ -91,19 +87,18 @@
                 <img
                   class="h-5 w-auto"
                   src="@/assets/logo.svg"
-                  alt="Company name"
+                  alt="Sandi Treliving"
                 />
               </router-link>
               <div class="-mr-2">
                 <PopoverButton
                   class="
-                    rounded-md
                     p-2
                     inline-flex
                     items-center
                     justify-center
                     transition
-                    hover:bg-accent-lightest
+                    hover:bg-white
                   "
                 >
                   <span class="sr-only">Close menu</span>
@@ -112,12 +107,12 @@
               </div>
             </div>
             <div class="mt-6">
-              <nav class="grid gap-y-8">
+              <nav class="grid space-y-4">
                 <PopoverButton>
                   <router-link
                     v-for="item in navigation"
                     :key="item.label"
-                    :to="item.path"
+                    :to="{ name: item.name }"
                     class="nav-item-mobile"
                   >
                     <span class="nav-item-mobile__text">{{ item.label }}</span>
@@ -134,6 +129,7 @@
 
 <script>
 import NavItem from "@/components/nav/NavItem.vue";
+import { navigation } from "@/data";
 import {
   Popover,
   PopoverButton,
@@ -141,7 +137,6 @@ import {
   PopoverPanel,
 } from "@headlessui/vue";
 import { MenuIcon, XIcon } from "@heroicons/vue/outline";
-import { navigation } from "@/data";
 
 export default {
   components: {

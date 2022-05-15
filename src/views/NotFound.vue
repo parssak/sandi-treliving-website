@@ -10,7 +10,7 @@ import Container from "@/components/layouts/Container.vue";
         Not quite sure what happened there.  <br />
         [Error 404]
       </p>
-      <router-link class="btn btn-xl mt-8" to="/">Take me back!</router-link>
+      <router-link class="btn btn-xl btn-dark mt-8" to="/">Take me back!</router-link>
     </div>
   </Container>
 </template>

@@ -21,7 +21,7 @@
           "
           @click.stop
         >
-          <router-link :to="path"><slot></slot></router-link>
+          <router-link :to="{ name: route.name }"><slot></slot></router-link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="ml-2 h-5 w-5 group-transition"

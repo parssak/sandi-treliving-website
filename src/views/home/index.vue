@@ -7,7 +7,7 @@
         alt=""
       />
     </template>
-    <h1 class="leading-tight">
+    <h1 class="leading-tight mb-12">
       <span class="text-accent-dark">Philanthropist,</span> <br />
       <span class="text-accent">Mental Health Advocate</span> <br />
       and
@@ -45,7 +45,9 @@
           hospital. As an organization, womenmind is committed to using its
           collective power to make impactful change for women’s mental health.
         </p>
-        <router-link :to="{ name: 'about' }" class="btn btn-lg btn-white mt-6"
+        <router-link
+          :to="{ name: 'about' }"
+          class="btn btn-xl btn-white w-full sm:w-max mt-6"
           >read more</router-link
         >
       </div>
@@ -60,7 +62,7 @@
         alt=""
       />
     </template>
-    <div class="grid gap-8 md:grid-cols-2">
+    <div class="grid gap-8 lg:grid-cols-2">
       <div>
         <h3>Let's Talk</h3>
         <p>
@@ -69,9 +71,21 @@
           donor community & more.
         </p>
       </div>
-      <div class="flex items-center ">
-        <input type="email" placeholder="Enter your email">
-        <button class="ml-2 btn btn-dark btn-xl btn-dark whitespace-nowrap">Notify me</button>
+      <div class="flex items-center flex-col md:flex-row">
+        <input type="email" placeholder="Enter your email" />
+        <button
+          class="
+            md:ml-2
+            mt-2
+            md:mt-0
+            w-full
+            btn btn-dark btn-xl btn-dark
+            whitespace-nowrap
+            md:w-max
+          "
+        >
+          Notify me
+        </button>
       </div>
     </div>
   </Banner>
