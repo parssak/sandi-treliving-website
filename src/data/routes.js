@@ -27,4 +27,11 @@ export const ROUTES_SOURCE = [
     component: () => import("@/views/speaking/index.vue"),
     meta: { title: "Speaking" },
   },
+  {
+    path: "/cartwheel",
+    label: "cartwheel",
+    name: "cartwheel",
+    component: () => import("@/views/cartwheel/index.vue"),
+    meta: { title: "cartwheel" },
+  },
 ];
