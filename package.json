@@ -5,7 +5,7 @@
     "dev": "vite --host",
     "build": "vite build",
     "serve": "vite preview",
-    "pages": "yarn build "
+    "pages": "yarn build & git add dist -f && git commit -m 'Updated build' && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "vue": "^3.2.33",

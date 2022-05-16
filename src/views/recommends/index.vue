@@ -89,7 +89,11 @@ const recommendations = [
         :key="r.title"
         class="flex flex-col items-center text-center"
       >
-        <img :src="r.image" alt="" class="w-full h-full object-cover mb-6 max-w-sm" />
+        <img
+          :src="r.image"
+          alt=""
+          class="w-full h-full object-cover mb-6 max-w-sm"
+        />
         <h3>{{ r.title }}</h3>
         <p>{{ r.type }}</p>
       </div>

@@ -11,7 +11,7 @@
         "
       >
         <div class="flex justify-start items-center lg:w-0 flex-1">
-          <router-link to="/">
+          <router-link :to="{ name: 'home' }">
             <span class="sr-only">Sandi Treliving</span>
             <div class="flex items-center">
               <img
@@ -37,7 +37,7 @@
           >
             <span class="sr-only">Open menu</span>
             <svg
-            class="h-6 w-6"
+              class="h-6 w-6"
               width="35"
               height="24"
               viewBox="0 0 35 24"
@@ -52,7 +52,7 @@
         </div>
         <PopoverGroup as="nav" class="hidden space-x-6 xl:space-x-7">
           <NavItem
-            v-for="item in navigation" 
+            v-for="item in navigation"
             :route="item"
             :path="item.path"
             :key="item.label"
@@ -91,7 +91,7 @@
                 xl:pr-8
               "
             >
-              <router-link to="/">
+              <router-link :to="{ name: 'home' }">
                 <img
                   class="h-9 w-auto"
                   src="@/assets/logo.svg"
