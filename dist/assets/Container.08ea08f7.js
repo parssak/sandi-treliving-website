@@ -1,0 +1,1 @@
+import{_ as a,o,c as t,a as e,r as c}from"./index.b830827d.js";const l={},r={class:"py-10 px-4 sm:px-6 lg:px-8"},n={class:"max-w-full lg:max-w-7xl lg:mx-auto"},_={class:"relative md:p-6 w-full"};function d(s,i){return o(),t("section",r,[e("div",n,[e("div",_,[c(s.$slots,"default")])])])}var p=a(l,[["render",d]]);export{p as C};
