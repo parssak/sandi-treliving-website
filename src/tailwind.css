@@ -139,8 +139,8 @@ select {
                     uppercase
                     text-lg
                     transition
-                    hover:bg-white
-                    hover:text-accent-light;
+                    hover:text-white
+                    hover:bg-accent-light;
 }
 
 .nav-item-mobile__text {
