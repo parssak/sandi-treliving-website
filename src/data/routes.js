@@ -48,4 +48,25 @@ export const ROUTES_SOURCE = [
     component: () => import("@/views/talent-fund/index.vue"),
     meta: { title: "Talent Fund" },
   },
+  {
+    path: "/next-chapter",
+    label: "next chapter",
+    name: "next-chapter",
+    component: () => import("@/views/next-chapter/index.vue"),
+    meta: { title: "Next Chapter" },
+  },
+  {
+    path: "/press",
+    label: "press",
+    name: "press",
+    component: () => import("@/views/press/index.vue"),
+    meta: { title: "press" },
+  },
+  {
+    path: "/contact",
+    label: "contact",
+    name: "contact",
+    component: () => import("@/views/contact/index.vue"),
+    meta: { title: "contact" },
+  },
 ];

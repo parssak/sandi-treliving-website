@@ -191,3 +191,11 @@ nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
   @apply absolute left-0 w-[3px] bg-accent-darkest h-full;
   content: "";
 }
+
+label {
+  @apply text-lg;
+}
+
+label > span {
+  @apply block mb-2;
+}

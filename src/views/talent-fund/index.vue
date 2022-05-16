@@ -2,7 +2,7 @@
   <Container>
     <div class="grid gap-8 lg:grid-cols-2">
       <div class="lg:py-12 lg:order-2">
-        <h1 class="blockquote">Talent Fund</h1>
+        <h1 class="blockquote leading-tight">Talent Fund</h1>
         <p>
           It’s an honour to serve as the Advisory Committee Chair to Telefilm’s
           Talent Fund, a private donation fund which supports emerging Canadian

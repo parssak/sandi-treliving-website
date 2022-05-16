@@ -1,5 +1,5 @@
 <template>
-  <main class="lg:relative lg:min-h-[92vh]">
+  <main class="lg:relative lg:min-h-screen">
     <div class="mx-auto max-w-7xl w-full">
       <div class="h-96 lg:w-1/2 lg:h-full lg:absolute lg:inset-y-0 lg:left-0">
         <slot name="image" />

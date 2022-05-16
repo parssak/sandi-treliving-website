@@ -73,13 +73,7 @@ const recommendations = [
   <Container class="-mt-10">
     <div class="blockquote">
       <div>
-        <h1 class="mb-4 md:mb-8 leading-tight">Sandi Recommends</h1>
-        <p class="text-xl">
-          When it comes to mental health there are so many valuable resources
-          available to us.
-          <br />
-          Here are a few I wholeheartedly recommend:
-        </p>
+        <h1 class="mb-4 md:mb-8 leading-tight">In The Press</h1>
       </div>
     </div>
 
@@ -89,7 +83,11 @@ const recommendations = [
         :key="r.title"
         class="flex flex-col items-center text-center"
       >
-        <img :src="r.image" alt="" class="w-full h-full object-cover mb-6 max-w-sm" />
+        <img
+          :src="r.image"
+          alt=""
+          class="w-full h-full object-cover mb-6 max-w-sm"
+        />
         <h3>{{ r.title }}</h3>
         <p>{{ r.type }}</p>
       </div>

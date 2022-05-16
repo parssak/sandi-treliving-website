@@ -15,7 +15,7 @@ import HeroImageSplit from "@/components/layouts/hero/HeroImageSplit.vue";
       />
     </template>
     <div class="blockquote mb-12 md:mb-8">
-      <h1 class="mb-0">Speaking</h1>
+      <h1 class="mb-0 leading-tight">Speaking</h1>
     </div>
     <p class="text-xl">
       Sandi Treliving offers inspiring speeches that audiences remember. Talk to

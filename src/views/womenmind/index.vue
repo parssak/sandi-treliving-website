@@ -39,7 +39,7 @@ const accomplishments = [
   <Container class="-mt-10">
     <div class="blockquote">
       <div>
-        <h1 class="italic mb-4 md:mb-8">womenmind</h1>
+        <h1 class="italic mb-4 md:mb-8 leading-tight">womenmind</h1>
         <p class="text-xl">
           Deborah Gilles, CEO of the CAMH Foundation explains it best in this
           short video. She believes, as I do, that the womenmind donor community
